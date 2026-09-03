@@ -1,0 +1,363 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f2f7fb;
+    color: #263238;
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+
+/* =====================
+   SKIP LINK
+===================== */
+
+.skip-link {
+    position: absolute;
+    top: -60px;
+    left: 10px;
+
+    padding: 12px 18px;
+
+    background-color: #000;
+    color: #fff;
+
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+
+/* =====================
+   HEADER
+===================== */
+
+header {
+    background-color: #087ea4;
+    color: white;
+
+    text-align: center;
+
+    padding-top: 30px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+
+/* =====================
+   NAVIGATION - FLEX
+===================== */
+
+nav {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    background-color: #075b75;
+}
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px 20px;
+
+    border-radius: 8px;
+
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: white;
+
+    color: #075b75;
+
+    transform: translateY(-3px);
+}
+
+nav a:focus {
+    outline: 3px solid #ffd166;
+}
+
+
+/* =====================
+   HERO - GRID
+===================== */
+
+.hero {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+
+    align-items: center;
+
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =====================
+   IMAGE - BOX MODEL
+===================== */
+
+img {
+    width: 100%;
+    max-width: 600px;
+
+    border: 4px solid #087ea4;
+
+    padding: 6px;
+
+    border-radius: 15px;
+
+    background-color: white;
+
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.03);
+}
+
+
+/* =====================
+   BUTTON
+===================== */
+
+.button {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 12px 22px;
+
+    background-color: #087ea4;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #064b60;
+
+    transform: scale(1.05);
+}
+
+
+/* =====================
+   CONTENT
+===================== */
+
+.content-section {
+    margin-top: 40px;
+}
+
+
+/* =====================
+   CARDS - FLEX
+===================== */
+
+.cards {
+    display: flex;
+
+    gap: 25px;
+
+    justify-content: center;
+}
+
+.card {
+    flex: 1;
+
+    background-color: white;
+
+    padding: 25px;
+
+    border: 2px solid #d6e7ed;
+
+    border-radius: 12px;
+
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 8px 20px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+/* =====================
+   GALLERY - GRID
+===================== */
+
+.gallery {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+.gallery figure {
+    margin: 0;
+
+    padding: 12px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 12px
+        rgba(0, 0, 0, 0.1);
+}
+
+.gallery img {
+    display: block;
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+}
+
+figcaption {
+    text-align: center;
+
+    padding: 10px;
+
+    font-weight: bold;
+}
+
+
+/* =====================
+   NTH-CHILD
+===================== */
+
+.gallery figure:nth-child(even) img {
+    border-radius: 40px 10px 40px 10px;
+}
+
+.gallery figure:nth-child(odd) img {
+    border-radius: 10px 40px 10px 40px;
+}
+
+
+/* =====================
+   CONTACT - FLEX
+===================== */
+
+.contact {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+}
+
+.contact > div {
+    flex: 1;
+}
+
+
+/* =====================
+   FOOTER
+===================== */
+
+footer {
+    margin-top: 50px;
+
+    padding: 25px;
+
+    background-color: #064b60;
+
+    color: white;
+
+    text-align: center;
+}
+
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media (max-width: 800px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+    }
+}
